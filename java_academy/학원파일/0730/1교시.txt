@@ -1,0 +1,36 @@
+		// 정수 1개입력
+		// 0~정수 : 홀수의 개수 출력
+		// 5 : 3개
+		/*
+		int n=sc.nextInt();
+		int i=0;
+		int cnt=0;
+		while(i<=n) {
+			if(i%2==1) {
+				cnt++;
+			}
+			i++;
+		}
+		System.out.println(cnt+"개");
+		*/
+	
+// 무한루프는 반드시 [중단시점],[종료조건] -> break
+
+		// 정수를 계속 입력 => 무한루프
+		// 양수->[양수입력함]
+		// 음수->xxx
+// => 반복문에 구현되어있는 수행을 중단 + 반복문중단xxx
+		// == continue 사용
+		// 0->종료 => 중단시점(break)
+		// continue,break 사용하기!~~
+		int x;
+		while(true) {
+			x=sc.nextInt();
+			if(x==0) {
+				break;
+			}
+			else if(x<0) {
+				continue;
+			}
+			System.out.println("양수입력함");
+		}

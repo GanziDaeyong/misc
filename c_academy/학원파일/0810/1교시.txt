@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main() {
+
+	// 변수명 규칙,식별자 이름규칙
+	int a = 10;
+	// 자료형  변수명 = 값;
+	int b = 20;
+	int sum = a + b;
+	printf("a와 b의 합은 %d %d입니다!\n", sum,sum);
+	// %d -> 형식지정자
+	// \n -> 제어문자
+
+	return 0;
+}

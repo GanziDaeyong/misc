@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main() {
+	
+	// [비교 연산자]
+	int a = 11, b = 10;
+	// NOT
+	// < > <= >= == !=
+
+	// [논리 연산자]
+	// && 그리고,~이고,and,교집합
+	// || 또는,~이거나,or,합집합
+	
+	// [삼항 연산자]==[조건 연산자]
+	// 조건식 ? T : F ;
+	int big = a > b ? a : b;
+	printf("big=%d\n", big);
+
+	// 정수 3개 입력
+	// 가장 작은 정수를 출력해주세요!~~
+	int x, y, z;
+	scanf("%d%d%d", &x, &y, &z);
+	int min = x < y ? x : y;
+	min = min < z ? min : z;
+	printf("%d\n", min);
+
+	return 0;
+}

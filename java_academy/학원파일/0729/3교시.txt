@@ -1,0 +1,78 @@
+import java.util.Scanner;
+
+public class Day02 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.println("1.이프로 2.미닛메이드 3.TOP 4.우유");
+		int b=sc.nextInt();
+		
+		String m1="이프로";
+		String m2="미닛메이드";
+		String m3="TOP";
+		String m4="우유";
+		int p1=900;
+		int p2=1200;
+		int p3=1000;
+		int p4=800;
+		
+		String menu=m1;
+		int price=p1;
+		switch(b) {
+		case 2:
+			menu=m2;
+			price=p2;
+			break;
+		case 3:
+			menu=m3;
+			price=p3;
+			break;
+		case 4:
+			menu=m4;
+			price=p4;
+			break;
+		}
+		
+		System.out.print("동전을 넣어주세요! : ");
+		int money=sc.nextInt();
+		
+		if(money>=price) {
+			System.out.println(menu+"가 나옵니다!");
+			money-=price;
+		}
+		else {
+			System.out.println("돈이 부족합니다!");
+		}
+		
+		if(money>0) {
+			System.out.println(money+"원 반환");
+		}
+			
+	}
+
+}
+
++++++
+
+import java.util.Scanner;
+
+public class Day02 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		
+		// 기능을 [여러번] 수행하고싶을때 -> 반복문
+		
+		int i=0;
+		while(i<10) {
+			if(i%2==0) {
+				System.out.println(i);
+			}
+			i++;
+		}
+		// ☆★☆★☆★☆★디버깅표☆★☆★☆★☆★
+
+	}
+
+}

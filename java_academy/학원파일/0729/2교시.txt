@@ -1,0 +1,55 @@
+import java.util.Scanner;
+
+public class Day02 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		
+		// 마지막 조건문 문제!
+		// 정수 2개 입력
+		// 5 50 -> 1시간 20분전 -> 4 30
+		// 0~59  1~12
+		// 2 10 -> 12 50
+		int h,m;
+		h=sc.nextInt();
+		m=sc.nextInt();
+		///
+		h--;
+		///
+		m-=20;
+		if(m<0) {
+			// -10 -> 50
+			// -20 -> 40
+			m+=60;
+			h--;
+		}
+		if(h<=0) {
+			// -1 -> 11
+			// 0 -> 12
+			h+=12;
+		}
+		System.out.println(h+":"+m);
+		
+	}
+
+}
+
++++++
+
+		int num=sc.nextInt();
+		num/=10;
+		switch(num) {
+		case 10:
+		case 9:
+			System.out.println("A");
+			break;
+		case 8:
+			System.out.println("B");
+			break;
+		case 7:
+			System.out.println("C");
+			break;
+		default:
+			System.out.println("F");
+			break;
+		}

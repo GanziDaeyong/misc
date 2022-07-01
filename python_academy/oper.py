@@ -1,0 +1,5 @@
+print(10==11)
+print(10!=11)
+print(10==11 and 10>3)
+print(10==11 or 10>3)
+print(not 10==11)

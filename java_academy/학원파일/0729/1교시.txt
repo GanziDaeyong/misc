@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Day02 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		// 제어문
+		// 제어문 : 조건문 VS 반복문
+		// 조건문-분기점/양자택일
+		// 반복문-특정 기능이나 행동을 여러번 수행할때
+		
+		// 정수 1개 입력-> 양수 / 음수 (0 xxx)
+		int a;
+		a=sc.nextInt();
+		if(a==0) {
+			System.out.println("0임!");
+		}
+		else if(a>0) {
+			if(a>100) {
+				System.out.println("엄청큰양수");
+			}
+			else {
+				System.out.println("양수");
+			}
+		}
+		else {
+			System.out.println("음수");
+		}
+		
+	}
+
+}

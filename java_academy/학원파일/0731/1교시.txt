@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+public class MainAct {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		/*
+		// 정수 1개
+		// 소수 O,X 출력해주세요!~~
+		int num=sc.nextInt();
+		int cnt=0;
+		for(int i=1;i<=num;i++) {
+			if(num%i==0) {
+				cnt++;
+			}
+		}
+		if(cnt==2) {
+			System.out.println("O");
+		}
+		else {
+			System.out.println("X");
+		}
+		// 구구단
+		// 2중for문==이중for문==중첩반복문
+		for(int a=2;a<=9;a++) {
+			// 8회
+			for(int i=1;i<=9;i++) {
+				// 9회*8회==72회
+				System.out.println(a+"x"+i+"="+a*i);
+			}
+			// 8회
+			System.out.println("----------");
+		}
+		for(int a=0;a<5;a++) {
+			// 5번
+			for(int i=0;;i++) {
+				// 5번x5번=25번
+				System.out.print("*");
+			}
+			// 5번
+			System.out.println();
+		}
+		*/
+		for(int i=0;i<5;i++) {
+			for(int j=0;j<=4-i;j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+
+}

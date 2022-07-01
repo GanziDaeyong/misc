@@ -1,0 +1,41 @@
+#include<stdio.h>
+int main() {
+
+	int i;
+	double d;
+	char c;
+	printf("정수입력: ");
+	scanf("%d", &i);
+	printf("실수입력: ");
+	scanf("%lf", &d);
+	printf("문자입력: ");
+	scanf(" %c", &c);
+	printf("%d %lf %c\n", i, d, c);
+
+	return 0;
+}
+
+#include<stdio.h>
+int main() {
+	
+	// [아스키코드]
+	int i = 10; // 1010
+	char c = 'A'; // 'A' -> [아스키코드표] -> 65 => 이진수
+	char c2 = 'a';
+	c=97;
+	printf("%d : %c\n", c, c);
+	
+	return 0;
+}
+
+#include<stdio.h>
+int main() {
+	
+	// [형변환]
+	int i = (int)3.14; // 명시적 형변환
+	printf("i=%d\n", i);
+	double d = 3; // 자동 형변환
+	printf("d=%lf\n", d);
+
+	return 0;
+}

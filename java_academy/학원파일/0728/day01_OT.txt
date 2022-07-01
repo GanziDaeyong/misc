@@ -1,0 +1,22 @@
+kedudisk.com
+it10000 / 학생11!
+수업자료->JAVA리소스->다운로드
+흰색설치 -> 압축해제
+
+수업자료
+koreastudyroom.com
+
+숙제
+하루 1시간씩 복습
+coding_helper@naver.com
+[JAVA_방학특강]
+
+와이파이: 15885890
+
+[핸드폰무음]
+[수업시간준수]
+
+파일루트안보일때 : 오른쪽 커피콩
+New->Java Project->class(메인체크)
+파일저장 : ctrl+s
+글씨크기 : ctrl+shift + +,-

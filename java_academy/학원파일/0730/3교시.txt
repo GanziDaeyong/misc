@@ -1,0 +1,83 @@
+import java.util.Scanner;
+
+public class MainAct {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		/*
+		int i=0;
+		while(i<3) {
+			System.out.println("안녕하세요!");
+			i++;
+		}
+		
+		// for( 초기식 ; 조건식 ; 증감식 )
+		int a;
+		for( a=0 ; a<3 ; a++ ) {
+			System.out.println("안녕하세요!");
+		}
+		System.out.println(a);
+		
+		// 1부터 10까지 모두 출력
+		// 그 합을 출력해보기!~~
+		int sum=0;
+		for(int b=1;b<=10;b++) {
+			System.out.print(b+" ");
+			sum+=b;
+		}
+		System.out.println(" 총합은 "+sum);
+		*/
+		// 정수 2개 입력
+		// 2 3 / 12 4
+		// 2 3
+		// 4 5 6 7 8 9 10 11 12
+		// 출력해주세요!~~
+		/*
+		int a,b;
+		a=sc.nextInt();
+		b=sc.nextInt();
+		if(a>b) {
+			// [교환] 알고리즘
+			int tmp=a; // 임시저장변수
+			a=b;
+			b=tmp;
+		}
+		for(int i=a;i<=b;i++) {
+			if(i%2==0) {
+				break; // [증감식]으로 이동
+			}
+			System.out.print(i+" ");
+		}
+		*/
+		// 정수를 10번 입력
+		// [반복문의 수행횟수]
+	// while : 여러번,영원히,조건을 만족하는동안
+	// for : n번,i회,시작점~끝점이 분명할때
+		// 총합 출력하기!~~
+		// 만약, 0이하의 정수가 입력된다면 즉시 종료
+		/*
+		int sum=0;
+		for(int i=0;i<10;i++) {
+			int x=sc.nextInt();
+			if(x<=0) {
+				break;
+			}
+			sum+=x;
+		}
+		System.out.println(sum);
+		*/
+		// 약수 구하기
+		// 정수 1개 입력
+		// 8 : 1 2 4 8
+		// 1 / NUM
+		int NUM=sc.nextInt();
+		for(int i=1;i<=NUM;i++) {
+			if(NUM%i==0) {
+				// i가 NUM의 약수이다.
+				System.out.print(i+" ");
+			}
+		}
+		// 약수,소수,완전수,피보나치,...
+	}
+
+}

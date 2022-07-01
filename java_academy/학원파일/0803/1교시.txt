@@ -1,0 +1,103 @@
+import java.util.Scanner;
+
+public class MainAct {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		
+		// 정수를 여러번 입력
+		// 소수일때에만 data[]배열에 저장
+		// 요소가 3개 가득 저장되었을때 모두 출력해주세요!~~
+		int[] data=new int[3];
+		int index=0;
+		while(true) {
+			int num=sc.nextInt();
+			int cnt=0;
+			for(int i=1;i<=num;i++) {
+				if(num%i==0) {
+					cnt++;
+				}
+			}
+			if(cnt==2) {
+				System.out.println("저장됨");
+				data[index++]=num;
+				if(index==3) {
+					break;
+				}
+			}
+			else {
+				System.out.println("X");
+			}
+		}
+		for(int v:data) {
+			System.out.print(v+" ");
+		}
+
+		// 10개의 요소를 arr[]배열에 저장
+		// 가장 큰 값과 그 위치(인덱스번호)를 출력해주세요!~~
+		int[] arr=new int[10];
+		for(int i=0;i<10;i++) {
+			arr[i]=sc.nextInt();
+		}
+		/////
+		int max=arr[0];
+		int maxIndex=0;
+		for(int i=1;i<10;i++) {
+			if(arr[i]>max) {
+				max=arr[i];
+				maxIndex=i;
+			}
+		}
+		System.out.println(max+" / ["+maxIndex+"]");
+
+		// 배열 오름차순 정렬->버블정렬(==거품정렬)
+		// 1. 비교->(데이터개수-1)번
+		// 2. [1]액션->(데이터개수)번 반복
+		// => 제일 큰 데이터가 뒤에서부터 정렬됨!
+		int[] arr=new int[5];
+		for(int i=0;i<5;i++) {
+			arr[i]=sc.nextInt();
+		}
+		for(int v:arr) {
+			System.out.print(v+" ");
+		}
+		System.out.println();
+
+		for(int a=0;a<5;a++) {
+			for(int i=0;i<5-1;i++) {
+				if(arr[i]>arr[i+1]) {
+					// [교환] 알고리즘
+					int tmp=arr[i];
+					arr[i]=arr[i+1];
+					arr[i+1]=tmp;
+				}
+			}
+		}
+
+		for(int v:arr) {
+			System.out.print(v+" ");
+		}
+		System.out.println();
+		
+		// 데이터 10개 입력
+		// 1.오름차순 정렬  2.가장큰정수 출력  3.가장작은정수 출력
+		int[] data=new int[10];
+		for(int i=0;i<10;i++) {
+			data[i]=sc.nextInt();
+		}
+		/////
+		for(int a=0;a<10;a++) {
+			for(int i=0;i<9;i++) {
+				if(data[i]>data[i+1]) {
+					int tmp=data[i];
+					data[i]=data[i+1];
+					data[i+1]=tmp;
+				}
+			}
+		}
+		for(int v:data) {
+			System.out.print(v+" ");
+		}
+		System.out.println();
+		System.out.println(data[9]+" "+data[0]);
+	}
+}
