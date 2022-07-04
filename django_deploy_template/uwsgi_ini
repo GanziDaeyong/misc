@@ -1,0 +1,57 @@
+[uwsgi]
+# Django-related settings
+# the base directory (full path)
+
+chdir = /home/ec2-user/waffle-toyproject/team5-server/trelloclone
+module = trelloclone.wsgi:application
+
+# the virtualenv (full path)
+
+home = /home/ec2-user/.pyenv/versions/waffle-toyproject
+virtualenv = /home/ec2-user/.pyenv/versions/waffle-toyproject
+
+socket = /home/ec2-user/waffle-toyproject_uwsgi.sock
+chmod-socket = 666
+
+# process-related settings
+
+master = true
+processes = 4
+enable-threads = true
+pidfile = /tmp/waffle-toyproject_uwsgi.pid
+
+vacuum = true
+daemonize = /home/ec2-user/waffle-toyproject_uwsgi.log
+lazy-apps = true
+
+buffer-size = 65535
+max-requests = 500
+#######################################################################
+[uwsgi]
+# Django-related settings
+# the base directory (full path)
+
+chdir = /home/ec2-user/waffle-toyproject/team5-server/trelloclone # 내 프로젝트 위치
+module = trelloclone.wsgi:application # 프로젝트 내 wsgi.py와 연결한다.
+
+# the virtualenv (full path)
+
+home = /home/ec2-user/.pyenv/versions/waffle-toyproject # 가상환경 위치
+virtualenv = /home/ec2-user/.pyenv/versions/waffle-toyproject
+
+socket = /home/ec2-user/waffle-backend_uwsgi.sock # nginx uwsgi가 연결되는 부분이다.
+chmod-socket = 666 # 소켓 보안
+
+# process-related settings
+
+master = true
+processes = 4 # 동시적으로 요청 처리할 수 있는 수.
+enable-threads = true
+pidfile = /tmp/waffle-backend_uwsgi.pid
+
+vacuum = true
+daemonize = /home/ec2-user/waffle-backend_uwsgi.log
+lazy-apps = true
+
+buffer-size = 65535
+max-requests = 500

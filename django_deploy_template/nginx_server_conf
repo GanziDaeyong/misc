@@ -1,0 +1,11 @@
+b4 servername
+
+server {
+	listen 80;
+        server_name _;
+        
+ location / {
+  	uwsgi_pass unix://home/ec2-user/waffle-toyproject_uwsgi.sock;
+: 	include /home/ec2-user/waffle-toyproject/team5-server/trelloclone/uwsgi_params;
+ }
+}

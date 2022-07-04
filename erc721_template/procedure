@@ -1,0 +1,38 @@
+NFT를 발행해보자 (openzeppelin + truffle)
+
+npm init
+npm install @openzeppelin/contracts
+npm install @truffle/hdwallet-provider	
+
+truffle init
+
+./contracts/SoongNFT.sol
+./migrations/1_token_migration.js
+./config.js 변경
+
+.secret 파일 생성
+
+
+
+
+
+1. 그림을 그린다.
+
+DeclarationError: Undeclared identifier.
+  --> project:/contracts/SoongToken.sol:27:9:
+  
+Promise {
+  <rejected> {
+    code: -32603,
+    message: 'Unknown Error: project id required in the url\n',
+    data: { originalError: {} }
+  }
+} {
+  code: -32603,
+  message: 'Unknown Error: project id required in the url\n',
+  data: { originalError: {} }
+
+-> 인푸라 새로운거 
+ 
+ 
+https://stackoverflow.com/questions/66789290/declarationerror-undeclared-identifier-although-its-present-in-erc721-sol

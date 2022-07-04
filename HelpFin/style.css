@@ -1,0 +1,72 @@
+/* @font-face {
+  font-family: "KCC-Jeongbeom";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202@1.0/KCC-Jeongbeom.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+} */
+
+@font-face {
+  font-family: "UhBeejung";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeejung.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.structure {
+  background-image: url("chalkboard.png");
+  background-repeat: no-repeat;
+  background-size: 705px 400px;
+  background-position: center;
+  width: 700px;
+  height: 400px;
+  resize: both;
+  overflow: scroll;
+}
+
+#title {
+  position: relative;
+  top: 20px;
+  font-family: "UhBeejung";
+  font-size: 30px;
+  color: white;
+  text-align: center;
+}
+
+.outer {
+  margin: auto;
+  margin-top: 23px;
+  width: 620px;
+  height: 300px;
+}
+
+.innerUl {
+  padding: 0;
+  list-style-type: none;
+  display: inline-block;
+  font-family: "UhBeejung";
+  font-size: 20px;
+  height: 250px;
+  width: 630;
+  color: white;
+  /*overflow-y: scroll;*/
+}
+
+.topic {
+  font-size: 23px;
+  font-weight: bold;
+  color: rgb(255, 182, 180);
+  text-decoration: underline 2px;
+  text-underline-position: under;
+}
+
+#info {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  font-family: "UhBeejung";
+  font-size: 15px;
+  color: white;
+  /* font-weight: ; */
+}

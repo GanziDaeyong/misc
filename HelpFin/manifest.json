@@ -1,0 +1,20 @@
+{
+  "name": "금융 용어는 어려워",
+  "description": "Finance lexicon helper",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "test",
+    "default_popup": "popup.html"
+  },
+
+  "permissions": ["scripting", "tabs"],
+  "host_permissions": [
+    "*://*:*",
+    "*://*/*",
+    "file:///home/jeongdaeyong/Desktop/HelpFin/index.html"
+  ]
+}
