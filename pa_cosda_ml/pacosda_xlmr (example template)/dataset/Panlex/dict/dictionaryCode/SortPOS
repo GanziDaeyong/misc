@@ -1,0 +1,29 @@
+def convert():
+
+    res  = []
+
+    with open("POSDictionary.out", "r", encoding="utf-8") as fo:
+        for line in fo:
+            token = line.split("\t")[0].strip()
+            pos = line.split("\t")[1].strip()
+            newpos = ""
+            if pos.startswith("JJ"):
+                newpos = "ADJ"
+            elif pos.startswith("RB"):
+                newpos = "ADV"
+            elif pos.startswith("VB"):
+                newpos = "V"
+            if newpos == "": newpos = pos
+            res.append(token + "\t"+ newpos + "\n")
+
+    with open("POSSORTED.out", "w", encoding="utf-8") as fw:
+        for t in res:
+            fw.write(t)
+
+
+if __name__ == "__main__":
+    convert()
+            
+
+
+

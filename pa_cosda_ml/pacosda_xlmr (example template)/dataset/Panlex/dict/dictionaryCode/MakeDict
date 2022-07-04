@@ -1,0 +1,59 @@
+import nltk
+
+def EXTRACT_ENG():
+
+    f = ["ca2.txt", "eu.txt"]
+    res = []
+
+    for t in f:
+        print("new file start processing")
+        with open(t, 'r', encoding='utf-8') as fo:
+            for line in fo:
+                res.append(line.split("\t")[0].strip())
+
+    f = ["es2.txt"]
+    for t in f:
+        print("new file start processing")
+        with open(t, 'r', encoding='utf-8') as fo:
+            for line in fo:
+                res.append(line.split(" ")[0].strip())
+
+
+    final = []
+    for tokens in res:
+        if len(tokens.split(" "))>1:
+            for splitted in tokens.split(" "):
+                final.append(splitted.strip())
+        elif len(tokens.split(" "))==1:
+                final.append(tokens.strip())
+
+
+    final = list(set(final))
+    print("extracted")
+    return final
+
+def POSTagging(extracted):
+
+    nltk.download('averaged_perceptron_tagger')
+
+    final = []
+    for tokentags in nltk.pos_tag(extracted):
+        token = tokentags[0]
+        tag = tokentags[1]
+        final.append(token + "\t" + tag + "\n")
+        
+    return final
+
+
+def save(tosave):
+    with open("POSDictionary.out", 'w', encoding='utf-8') as fw:
+        for v in tosave: 
+            fw.write(v)
+            print(v)
+
+
+if __name__ == "__main__":
+    extracted = EXTRACT_ENG()
+    tosave = POSTagging(extracted)
+    save(tosave)
+
